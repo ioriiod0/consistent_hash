@@ -28,7 +28,7 @@ consistent_hash_map只提供最基本的一致性hash的功能，并不直接支
 
 ##member type
     size_type           Hash::reslut_type               hash函数返回值的类型
-    value_type          std::pair<const size_type,T>    first为节点的函数值，second为节点
+    value_type          std::pair<const size_type,T>    first为节点的哈希值，second为节点
     iterator            a bidirectional iterator to value_type  双向迭代器
     reverse_iterator    reverse_iterator<iterator>      反向迭代器
 
