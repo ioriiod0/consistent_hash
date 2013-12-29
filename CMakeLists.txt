@@ -1,0 +1,13 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT(consistant_hash)
+IF(APPLE)
+    SET(CMAKE_CXX_COMPILER clang++)
+ENDIF(APPLE)
+set(CMAKE_BUILD_TYPE DEBUG)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g")
+
+INCLUDE_DIRECTORIES(/usr/local/include)
+LINK_DIRECTORIES(/usr/local/lib)
+
+ADD_EXECUTABLE(test test.cpp)
+ADD_EXECUTABLE(example example.cpp)
