@@ -1,7 +1,7 @@
 # 一致性哈希的C++实现
 
 一致性哈希是分布式计算领域被广泛应用的一个算法。在许多分布式系统包括 Amazon Dynamo, memcached, Riak 等中都有使用。
-一致性哈希的原理比较简单，网上有很多介绍的比较好的文章，也有一些相关的代码，但是都不太令人满意，因此自己实现了一个。代码很简单，放在了github (地址) 上面。
+一致性哈希的原理比较简单，网上有很多介绍的比较好的文章，也有一些相关的代码，但是都不太令人满意，因此自己实现了一个。代码很简单，放在了 [github](https://github.com/ioriiod0/consistent_hash) 上面。
 
 
 ##consistent_hash_map
@@ -62,7 +62,7 @@ consistent_hash_map只提供最基本的一致性hash的功能，并不直接支
 
 ##虚拟节点的例子
 
-整个例子的完整代码在这。
+整个例子的完整代码[在这](https://github.com/ioriiod0/consistent_hash/blob/master/example.cpp)。
 在这个例子中，我们首先定义虚拟节点类型，和其对应的hasher。
 
     #include <stdint.h>
