@@ -1,7 +1,7 @@
 # 一致性哈希的C++实现
 
 一致性哈希是分布式计算领域被广泛应用的一个算法。在许多分布式系统包括 Amazon Dynamo, memcached, Riak 等中都有使用。
-一致性哈希的原理比较简单，网上有很多介绍的比较好的文章，也有一些相关的代码，但是都不太令人满意，因此自己实现了一个。代码很简单，放在了 [github](https://github.com/ioriiod0/consistent_hash) 上面。
+一致性哈希的原理比较简单，网上有很多介绍的比较好的文章，也有一些相关的代码，但是这些代码都不太令人满意，因此自己实现了一个。代码很简单，放在了 [github](https://github.com/ioriiod0/consistent_hash) 上面。
 
 
 ##consistent_hash_map
@@ -40,8 +40,7 @@ consistent_hash_map只提供最基本的一致性hash的功能，并不直接支
     判断consistent_hash_map是否为空
 
     std::pair<iterator,bool> insert(const T& node);
-    插入一个节点，如果返回值中bool变量为真，iterator则为指向插入节点的迭代器。如果bool为假，表示插入失败。
-    插入失败因为节点已经存在或者是节点的hash值与其他节点发生冲突。
+    插入一个节点，如果返回值中bool变量为真，iterator则为指向插入节点的迭代器。如果bool为假，表示插入失败，iterator指向已经存在的节点。插入失败因为节点已经存在或者是节点的hash值与其他节点发生冲突。
 
     void erase(iterator it);
     通过迭代器删除指定节点。
